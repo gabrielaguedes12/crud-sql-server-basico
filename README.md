@@ -34,3 +34,8 @@ CREATE TABLE Clientes (
 ![Captura de tela 2025-06-26 233154](https://github.com/user-attachments/assets/68698c34-c9f5-4937-aa2a-c4f530733b80)
 
 ![Captura de tela 2025-06-26 232915](https://github.com/user-attachments/assets/31e9785f-bb22-49ce-9309-5ed5e28cd673)
+
+🎯 Objetivo
+Esse projeto é parte de um plano de estudos com foco em backend. A prática com comandos SQL visa consolidar fundamentos para integrar futuramente com APIs desenvolvidas em Java + Spring Boot.
+
+
