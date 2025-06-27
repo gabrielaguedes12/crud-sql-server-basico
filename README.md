@@ -27,6 +27,8 @@ CREATE TABLE Clientes (
   data_criacao DATETIME DEFAULT GETDATE()
 );
 
+```
+### Prints das Operações
 ![Captura de tela 2025-06-26 232840](https://github.com/user-attachments/assets/5471e76f-db2c-49b0-8f31-675ffa7a9af7)
 
 ![Captura de tela 2025-06-26 233154](https://github.com/user-attachments/assets/68698c34-c9f5-4937-aa2a-c4f530733b80)
