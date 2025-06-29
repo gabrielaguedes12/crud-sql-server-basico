@@ -27,6 +27,28 @@ CREATE TABLE Clientes (
   data_criacao DATETIME DEFAULT GETDATE()
 );
 
+CREATE TABLE Contas (
+  id_conta INT IDENTITY(1,1) PRIMARY KEY,
+  id_cliente INT NOT NULL,
+  numero_conta VARCHAR(20) NOT NULL,
+  tipo_conta VARCHAR(50) NOT NULL,
+  saldo DECIMAL(10,2) DEFAULT 0.00,
+  ativa BIT DEFAULT 1,
+  data_criacao DATETIME DEFAULT GETDATE(),
+
+  FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+);
+
+CREATE TABLE Transacao (
+  id_transacao INT IDENTITY(1,1) PRIMARY KEY,
+  id_conta INT NOT NULL,
+  tipo_transacao VARCHAR(100) NOT NULL,
+  valor DECIMAL(10,2) DEFAULT 0.00,
+  data_transacao DATETIME DEFAULT GETDATE(),
+
+  FOREIGN KEY (id_conta) REFERENCES Contas(id_conta)
+);
+
 /*CREATE-insert*/
 INSERT INTO Clientes(nome,email, cpf)
 VALUES ('Eduardo Santos','edusant@gmail.com', '12345678934');
