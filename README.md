@@ -75,4 +75,7 @@ JOIN clientes c ON co.id_cliente = c.id_cliente;
 🎯 Objetivo
 Esse projeto é parte de um plano de estudos com foco em backend. A prática com comandos SQL visa consolidar fundamentos para integrar futuramente com APIs desenvolvidas em Java + Spring Boot.
 
+## 👩‍💻 Autora
 
+Gabriela Guedes — https://github.com/gabrielaguedes12
+Projeto feito como parte do plano de estudos de backend com Java e Spring Boot.
