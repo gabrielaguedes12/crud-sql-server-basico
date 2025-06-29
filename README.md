@@ -64,6 +64,29 @@ SELECT c.nome, co.numero_conta, co.saldo
 FROM contas co
 JOIN clientes c ON co.id_cliente = c.id_cliente;
 
+SELECT 
+  co.numero_conta, 
+  t.tipo_transacao, 
+  t.valor, 
+  t.data_transacao
+FROM 
+  Transacao t
+JOIN 
+  Contas co ON t.id_conta = co.id_conta;
+
+  SELECT 
+  c.nome, 
+  co.numero_conta, 
+  t.tipo_transacao, 
+  t.valor, 
+  t.data_transacao
+FROM 
+  Clientes c
+JOIN 
+  Contas co ON c.id_cliente = co.id_cliente
+JOIN 
+  Transacao t ON co.id_conta = t.id_conta;
+
 ```
 ### Prints das Operações
 ![Captura de tela 2025-06-26 232840](https://github.com/user-attachments/assets/5471e76f-db2c-49b0-8f31-675ffa7a9af7)
