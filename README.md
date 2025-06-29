@@ -27,6 +27,43 @@ CREATE TABLE Clientes (
   data_criacao DATETIME DEFAULT GETDATE()
 );
 
+/*CREATE-insert*/
+INSERT INTO Clientes(nome,email, cpf)
+VALUES ('Eduardo Santos','edusant@gmail.com', '12345678934');
+
+INSERT INTO Contas(id_cliente, numero_conta, tipo_conta)
+VALUES (2,'147852-6','corrente');
+
+INSERT INTO transacao (id_conta, tipo_transacao, valor)
+VALUES (7, 'entrada', 500.00);
+
+/*READ-select*/
+SELECT * FROM Clientes;
+SELECT * FROM Contas;
+SELECT * FROM Transacao;
+
+/*UPDATE*/
+UPDATE Clientes
+SET nome='Maria Silva'
+WHERE id_cliente=2;
+
+UPDATE contas
+SET ativa = 0
+WHERE id_conta = 4;
+
+UPDATE Transacao
+SET tipo_transacao = 'saida'
+Where id_transacao=1;
+
+/*DELETE-deletar*/
+delete from Contas
+WHERE id_conta = 4;
+
+/*JOIN*/
+SELECT c.nome, co.numero_conta, co.saldo
+FROM contas co
+JOIN clientes c ON co.id_cliente = c.id_cliente;
+
 ```
 ### Prints das Operações
 ![Captura de tela 2025-06-26 232840](https://github.com/user-attachments/assets/5471e76f-db2c-49b0-8f31-675ffa7a9af7)
